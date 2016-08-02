@@ -98,7 +98,7 @@ export class MovieEditReactiveComponent implements OnInit, OnDestroy {
                 // Causes infinite loop
                 // this.titleControl.updateValue(value.title.toUpperCase());
                 value.title = value.title.toUpperCase();
-                //console.log(value.title);
+                // console.log(value.title);
                 return value;
             })
             .subscribe(data => this.onValueChanged(data));

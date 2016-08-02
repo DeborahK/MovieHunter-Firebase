@@ -17,10 +17,10 @@ bootstrap(AppComponent, [
   FIREBASE_PROVIDERS,
   // Initialize Firebase app  
   defaultFirebase({
-    apiKey: "AIzaSyDHyFDuc3lgCghTWqlvyET8A1mP_co4qes",
-    authDomain: "moviehunter-14222.firebaseapp.com",
-    databaseURL: "https://moviehunter-14222.firebaseio.com",
-    storageBucket: "moviehunter-14222.appspot.com"
+    apiKey: 'AIzaSyDHyFDuc3lgCghTWqlvyET8A1mP_co4qes',
+    authDomain: 'moviehunter-14222.firebaseapp.com',
+    databaseURL: 'https://moviehunter-14222.firebaseio.com',
+    storageBucket: 'moviehunter-14222.appspot.com'
   })
 ])
 .catch(err => console.error(err));

@@ -7,7 +7,7 @@ export const routes: RouterConfig = [
   { path: '', redirectTo: '/welcome', pathMatch: 'full'},
   { path: 'welcome', component: WelcomeComponent },
   ...MovieRoutes,
-  { path: '**', redirectTo: '/welcome', pathMatch: 'full' } //Not found
+  { path: '**', redirectTo: '/welcome', pathMatch: 'full' } // Not found
 ];
 
 export const APP_ROUTER_PROVIDERS = [

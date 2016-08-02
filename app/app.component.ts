@@ -4,6 +4,8 @@ import { ROUTER_DIRECTIVES } from '@angular/router';
 
 import { AngularFire, FirebaseObjectObservable, FirebaseListObservable } from 'angularfire2';
 import { Observable } from 'rxjs';
+import 'rxjs/add/operator/do';
+
 import { MovieService } from './movies/movie.service';
 import { IMovie } from './movies/movie';
 
@@ -54,13 +56,13 @@ export class AppComponent {
     moviesFiltered: Observable<IMovie[]>;
 
     constructor(af: AngularFire) {
-        //af.database.list('movies').subscribe(movies => console.log(movies));
-        //af.database.object('movies/2').subscribe(movie => console.log(JSON.stringify(movie)));
+        // af.database.list('movies').subscribe(movies => console.log(movies));
+        // af.database.object('movies/2').subscribe(movie => console.log(JSON.stringify(movie)));
         this.movie = af.database.object('movies/2');
         this.movies = af.database.list('movies');
 
         this.moviesFiltered = this.movies
             .do(items => console.log(items))
-            .map(items => items.filter(item =>item.title.startsWith("The")));
+            .map(items => items.filter(item => item.title.startsWith('The')));
     }
 }
